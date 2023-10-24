@@ -1,0 +1,107 @@
+<!-- 声明 -->
+<!DOCTYPE html>
+<html lang="zh-Ch">
+
+<head>
+    <meta charset="UTF-8">
+    <title>定义网页的标题</title>
+</head>
+
+<body>
+    <p>这是给用户看的信息</p>
+
+    <b><i>shw</i> </b>
+
+    <h1>shwshwshw</h1>
+    <p>&copy;版权声明111</p>
+    <a href="https://www.baidu.com">点击进入搜狗</a>
+    <div>块级元素,p标签不能包含块级标签</div>
+    <ul type="disc">
+        这是无序列表
+        <li>第一项</li>
+        <li>第二项</li>
+    </ul>
+    <ol type="1" start="1">
+        这是个有序列表
+        <li>第一项</li>
+        <li>第二项</li>
+    </ol>
+    <dl>
+        <dt>标题1</dt>
+        <dd>内容1234566
+            2222
+        </dd>
+        <dt>标题2</dt>
+        <dd>内容222</dd>
+    </dl>
+    <table border="1">
+        <tread>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>爱好</th>
+            </tr>
+        </tread>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Egon</td>
+                <td>HHH</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>yuan</td>
+                <td>DALIAN</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <form action="http://127.0.0.1:8080/index" method="POST">
+        <div>
+            <label for="i1">用户名：</label>
+            <input id="i1" name="username" type="text">
+        </div>
+        <div>
+            <label>密码：
+                <input name="pwd" type="password">
+            </label>
+        </div>
+        <div>
+            命名name一样就可以设定成只能选择一个<br>
+            <input name="gender" type="radio">男
+            <input name="gender" type="radio">女
+        </div>
+        <div>
+            <label>爱好</label>
+            <input type="checkbox" value="basketball">篮球
+            <input type="checkbox" value="football">足球
+            <input type="checkbox" value="piano">钢琴
+        </div>
+        <div>
+            <label>请选择本地文件</label>
+            <input type="file" name="avator">
+        </div>
+        <div>
+            <label>公司信息</label>
+            <textarea name="info" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="提交">
+        </div>
+        <div>
+            <label for-"s1">地址</label>
+            <select name="addr" id="s1">
+                <option value="">------</option>
+                <option value="bj">北京</option>
+                <option value="sh">上海</option>
+            </select>
+        </div>
+    </form>
+    <hr>
+    <form action="https://www.baidu.com/s">
+        <input type="input" name="wd">
+        <input type="submit" value="百度">
+    </form>
+</body>
+
+</html>
