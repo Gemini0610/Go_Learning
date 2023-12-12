@@ -2,29 +2,27 @@ package main
 
 import (
 	"fmt"
-	"html/template"
+	"io/ioutil"
+	"math/rand"
 	"net/http"
+	"strings"
 )
 
 // template示例
 func info(w http.ResponseWriter, r *http.Request) {
-	//打开一个模板文件
-	t, err := template.ParseFiles("./info.html")
+	data, err := ioutil.ReadFile("./info.html")
 	if err != nil {
-		fmt.Println("parse html file failed, err ", err)
+		fmt.Println("read file failed, err:", err)
 		return
 	}
-	//用数据渲染模板
-	data := "<li>hhhhhhhh</li>"
-	t.Execute(w, data)
-	// num := rand.Intn(10)
-	// dataStr := string(data) //转换成字符串
-	// if num > 5 {
-	// 	dataStr = strings.Replace(dataStr, "{ooxx}", "<li>hhhhhhhh</li>", 1)
-	// } else {
-	// 	dataStr = strings.Replace(dataStr, "{ooxx}", "<li>wwwwwwww</li>", 1)
-	// }
-	// w.Write([]byte(dataStr))
+	num := rand.Intn(10)
+	dataStr := string(data) //转换成字符串
+	if num > 5 {
+		dataStr = strings.Replace(dataStr, "{oo xx}", "<li>《SHW》</li>", 1)
+	} else {
+		dataStr = strings.Replace(dataStr, "{oo xx}", "<li>《哈利波特》</li>", 1)
+	}
+	w.Write([]byte(dataStr))
 }
 func main() {
 	http.HandleFunc("/info", info)
