@@ -10,9 +10,17 @@
 <body>
     <div>
         <ul>
-            {{.}}
+            <li>姓名:{{.UserName}}</li>
+            <li>密码:{{.Password}}</li>
+            <li>年龄:{{.Age}}</li>
         </ul>
     </div>
+    <hr>
+    {{if gt .Age 18}}
+    <div>开会</div>
+    {{else}}
+    <div>成长</div>
+    {{end}}
 </body>
 
 </html>

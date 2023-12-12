@@ -7,6 +7,12 @@ import (
 )
 
 // template示例
+type User struct {
+	UserName string
+	Password string
+	Age      int
+}
+
 func info(w http.ResponseWriter, r *http.Request) {
 	//调用template
 	//打开一个模板文件
@@ -17,8 +23,8 @@ func info(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//用数据渲染模板
-	data := "<li>hhhh</li>"
-	t.Execute(w, data)
+	// data := "<li>hhhh</li>"
+	// t.Execute(w, data)
 
 	// num := rand.Intn(10)
 	// dataStr := string(data) //转换成字符串
@@ -28,6 +34,14 @@ func info(w http.ResponseWriter, r *http.Request) {
 	// 	dataStr = strings.Replace(dataStr, "{oo xx}", "<li>《哈利波特》</li>", 1)
 	// }
 	// w.Write([]byte(dataStr))
+
+	//结构体
+	user := User{
+		"TOM",
+		"123",
+		12,
+	}
+	t.Execute(w, user)
 }
 func main() {
 	http.HandleFunc("/info", info)
