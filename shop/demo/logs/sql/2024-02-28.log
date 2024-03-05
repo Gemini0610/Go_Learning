@@ -1,2 +1,0 @@
-2024-02-28 18:56:46.374 [DEBU] {40908cef9601b817b503975cdd37d02f} [ 10 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
-2024-02-28 18:56:46.397 [DEBU] {40908cef9601b817b503975cdd37d02f} [ 22 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`link`,`sort`,`created_at`,`updated_at`) VALUES('1','1',1,'2024-02-28 18:56:46','2024-02-28 18:56:46') 
